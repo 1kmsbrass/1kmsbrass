@@ -1,0 +1,53 @@
+{{ define "main" }}
+
+{{ partial "masthead.html" . }}
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-text">✦ நான்கு பிரிவுகள் ✦</div>
+  <div class="divider-line right"></div>
+</div>
+
+<main class="catalogue" role="main">
+  {{ range .Site.Data.categories }}
+    {{ partial "category-card.html" . }}
+  {{ end }}
+</main>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-text">✦ பிரபலமான பொருட்கள் ✦</div>
+  <div class="divider-line right"></div>
+</div>
+
+<div class="featured-wrap">
+  <div class="featured-scroll" role="list" aria-label="பிரபலமான பொருட்கள்">
+    {{ range .Site.Data.featured }}
+      {{ partial "featured-chip.html" . }}
+    {{ end }}
+    <a href="/products/" class="f-chip" role="listitem" style="border-style:dashed; min-width:70px;">
+      <span class="f-chip-emoji">➕</span>
+      <span class="f-chip-name">மேலும்</span>
+      <span class="f-chip-tamil">All Items</span>
+    </a>
+  </div>
+</div>
+
+<div class="promise-bar" role="complementary" aria-label="தரமான வாக்குறுதி">
+  <div class="promise-item">
+    <span class="promise-icon">🥇</span>
+    <span class="promise-label">தூய<br>பித்தளை</span>
+  </div>
+  <div class="promise-item">
+    <span class="promise-icon">🏭</span>
+    <span class="promise-label">நேரடி<br>விலை</span>
+  </div>
+  <div class="promise-item">
+    <span class="promise-icon">🛕</span>
+    <span class="promise-label">கோவில்<br>நிபுணர்</span>
+  </div>
+</div>
+
+{{ partial "footer-stamp.html" . }}
+
+{{ end }}

@@ -1,0 +1,47 @@
+# Each category card on the homepage.
+# icon: emoji fallback always shown unless imageURL is set (e.g. your R2 URL)
+# ctaType: "link" (plain arrow button) or "whatsapp" (green WA button)
+
+- slug: dealers
+  class: dealers
+  icon: "🤝"
+  imageURL: ""
+  heading: "வணிகப்<br>பெருமக்கள்"
+  sub: "கடை உரிமையாளர்கள் · டீலர்கள்"
+  tags: ["மொத்த விலை", "நிலையான வழங்கல்", "தரமான பொருள்"]
+  href: "/wholesale/"
+  ctaType: link
+  ctaLabel: "விலை பட்டியல்"
+
+- slug: temple
+  class: temple
+  icon: "🛕"
+  imageURL: ""
+  heading: "கும்பாபிஷேகம்<br>& கோவில்"
+  sub: "அனைத்து சடங்கு பொருட்கள்"
+  tags: ["கலசம்", "குடம்", "சொம்பு", "விளக்கு"]
+  href: "/temple-items/"
+  ctaType: link
+  ctaLabel: "காண்க"
+
+- slug: gifts
+  class: gifts
+  icon: "🎁"
+  imageURL: ""
+  heading: "Return Gifts<br>& தாம்பூலம்"
+  sub: "திருமண · விழா · நிகழ்ச்சி"
+  tags: ["மொத்தமாக", "வரவேற்பு பரிசு", "குறைந்த விலை"]
+  href: "https://wa.me/919150195255?text=Return%20Gifts%20%E2%80%93%20விலை%20கேட்கிறேன்"
+  ctaType: whatsapp
+  ctaLabel: "WhatsApp"
+
+- slug: home
+  class: home
+  icon: "🏺"
+  imageURL: ""
+  heading: "வீட்டிற்கான<br>பொருட்கள்"
+  sub: "பூஜை · சமையல் · பரிசு"
+  tags: ["பூஜை செட்", "பாத்திரங்கள்", "பொங்கல் விழா"]
+  href: "/products/"
+  ctaType: link
+  ctaLabel: "தேர்ந்தெடுக்க"

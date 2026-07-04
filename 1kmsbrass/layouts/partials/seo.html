@@ -1,0 +1,29 @@
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.tagline }}{{ end }}">
+{{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.tagline }}{{ end }}">
+<meta property="og:type" content="{{ if eq .Params.type "product" }}product{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.imageURL }}<meta property="og:image" content="{{ . }}">{{ end }}
+
+{{ if eq .Params.type "product" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ .Params.nameEnglish }}",
+  "description": "{{ .Description }}",
+  {{ with .Params.imageURL }}"image": "{{ . }}",{{ end }}
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "INR",
+    "price": "{{ .Params.price }}",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}

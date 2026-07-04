@@ -1,0 +1,10 @@
+{{ $f := . }}
+<a href="{{ $f.href }}" class="f-chip" role="listitem">
+  {{ if $f.imageURL }}
+    <img src="{{ $f.imageURL }}" alt="{{ $f.nameEnglish }}" style="width:26px;height:26px;object-fit:contain;">
+  {{ else }}
+    <span class="f-chip-emoji">{{ $f.emoji }}</span>
+  {{ end }}
+  <span class="f-chip-name">{{ $f.nameTamil }}</span>
+  <span class="f-chip-tamil">{{ $f.nameEnglish }}</span>
+</a>

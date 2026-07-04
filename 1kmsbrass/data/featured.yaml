@@ -1,0 +1,44 @@
+# Horizontal scroll chips under "பிரபலமான பொருட்கள்"
+# imageURL: leave blank to use emoji; fill with R2 url for real photos (kalasam etc.)
+
+- slug: vilakku
+  emoji: "🪔"
+  imageURL: ""
+  nameTamil: "விளக்கு"
+  nameEnglish: "Vilakku"
+  href: "/products/vilakku/"
+
+- slug: kalasam
+  emoji: "🏺"
+  imageURL: ""
+  nameTamil: "கலசம்"
+  nameEnglish: "Kalasam"
+  href: "/products/kalasam/"
+
+- slug: kudam
+  emoji: "🫙"
+  imageURL: ""
+  nameTamil: "குடம்"
+  nameEnglish: "Kudam"
+  href: "/products/kudam/"
+
+- slug: sompu
+  emoji: "📿"
+  imageURL: ""
+  nameTamil: "சொம்பு"
+  nameEnglish: "Sompu"
+  href: "/products/sompu/"
+
+- slug: pooja-set
+  emoji: "🙏"
+  imageURL: ""
+  nameTamil: "பூஜை செட்"
+  nameEnglish: "Pooja Set"
+  href: "/products/pooja-set/"
+
+- slug: aarati
+  emoji: "✨"
+  imageURL: ""
+  nameTamil: "ஆரத்தி"
+  nameEnglish: "Aarati"
+  href: "/products/aarati/"

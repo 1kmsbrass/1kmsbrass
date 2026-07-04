@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+{{ partial "masthead.html" . }}
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-text">✦ {{ .Params.nameTamil }} ✦</div>
+  <div class="divider-line right"></div>
+</div>
+
+<main style="padding: 16px;">
+  <div class="c-card" style="max-width:420px;margin:0 auto;">
+    <div class="c-card-band"></div>
+    <div class="c-card-icon-zone">
+      {{ if .Params.imageURL }}
+        <img src="{{ .Params.imageURL }}" class="c-icon" style="width:120px;height:120px;" alt="{{ .Params.nameEnglish }}">
+      {{ else }}
+        <div class="c-icon-fallback" style="display:block;font-size:64px;">🏺</div>
+      {{ end }}
+    </div>
+    <div class="c-body">
+      <div class="c-heading" style="font-size:19px;">{{ .Params.nameEnglish }}</div>
+      <div class="c-sub">{{ .Params.nameTamil }}</div>
+      <p style="font-size:13px; line-height:1.6; margin: 10px 0;">{{ .Content }}</p>
+      {{ if .Params.price }}
+      <div style="font-size:16px; font-weight:800; color:var(--crimson); margin-bottom:12px;">
+        ₹{{ .Params.price }} / {{ .Params.unit }}
+        <span style="font-size:11px; font-weight:400; color:var(--ink-soft);">(மொத்த விலை உங்கள் அளவைப் பொறுத்தது)</span>
+      </div>
+      {{ end }}
+      <a href="https://wa.me/{{ .Site.Params.whatsapp }}?text=வணக்கம்%2C%20{{ .Params.nameEnglish | urlquery }}%20பற்றி%20விலை%20கேட்கிறேன்" class="c-cta wa">
+        <span class="wa-icon">💬</span>
+        <span>விலை கேட்க WhatsApp</span>
+        <span class="c-cta-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+{{ partial "footer-stamp.html" . }}
+
+{{ end }}

@@ -1,0 +1,20 @@
+baseURL = "https://www.kumbakonammetalstores.com/"
+languageCode = "ta"
+title = "கும்பகோணம் மெட்டல் ஸ்டோர்ஸ்"
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[params]
+  titleLine1   = "கும்பகோணம்"
+  titleLine2   = "மெட்டல் ஸ்டோர்ஸ்"
+  phone        = "+919150195255"
+  phoneDisplay = "9150195255"
+  whatsapp     = "919150195255"
+  tagline      = "தேர்ந்தெடுத்த தரம் · நேரடி விலை · நம்பகமான சேவை"
+  since        = "1990"
+
+[minify]
+  disableXML = true

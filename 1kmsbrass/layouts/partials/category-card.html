@@ -1,0 +1,31 @@
+{{ $c := . }}
+<a href="{{ $c.href }}" class="c-card {{ $c.class }}">
+  <div class="c-card-band"></div>
+  <div class="c-card-icon-zone">
+    {{ if $c.imageURL }}
+      <img src="{{ $c.imageURL }}" class="c-icon" alt="{{ $c.heading | plainify }}" onerror="this.classList.add('error')">
+      <div class="c-icon-fallback">{{ $c.icon }}</div>
+    {{ else }}
+      <div class="c-icon-fallback" style="display:block;">{{ $c.icon }}</div>
+    {{ end }}
+  </div>
+  <div class="c-body">
+    <div class="c-heading">{{ $c.heading | safeHTML }}</div>
+    <div class="c-sub">{{ $c.sub }}</div>
+    <div class="c-tags">
+      {{ range $c.tags }}<span class="c-tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ if eq $c.ctaType "whatsapp" }}
+      <div class="c-cta wa">
+        <span class="wa-icon">💬</span>
+        <span>{{ $c.ctaLabel }}</span>
+        <span class="c-cta-arrow">→</span>
+      </div>
+    {{ else }}
+      <div class="c-cta">
+        <span>{{ $c.ctaLabel }}</span>
+        <span class="c-cta-arrow">→</span>
+      </div>
+    {{ end }}
+  </div>
+</a>

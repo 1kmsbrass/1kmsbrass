@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+{{ partial "masthead.html" . }}
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-text">✦ {{ .Title }} ✦</div>
+  <div class="divider-line right"></div>
+</div>
+
+{{ if .Content }}
+<div style="padding: 4px 20px 8px; font-size:13px; color:var(--ink-soft); line-height:1.6;">
+  {{ .Content }}
+</div>
+{{ end }}
+
+<main class="catalogue" role="main">
+  {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="c-card home">
+      <div class="c-card-band"></div>
+      <div class="c-card-icon-zone">
+        {{ if .Params.imageURL }}
+          <img src="{{ .Params.imageURL }}" class="c-icon" alt="{{ .Params.nameEnglish }}">
+        {{ else }}
+          <div class="c-icon-fallback" style="display:block;">🏺</div>
+        {{ end }}
+      </div>
+      <div class="c-body">
+        <div class="c-heading">{{ .Params.nameEnglish }}</div>
+        <div class="c-sub">{{ .Params.nameTamil }}</div>
+        {{ if .Params.price }}
+        <div class="c-tags"><span class="c-tag">₹{{ .Params.price }} / {{ .Params.unit }}</span></div>
+        {{ end }}
+        <div class="c-cta">
+          <span>விவரம் காண</span>
+          <span class="c-cta-arrow">→</span>
+        </div>
+      </div>
+    </a>
+  {{ end }}
+</main>
+
+{{ partial "footer-stamp.html" . }}
+
+{{ end }}

@@ -1,0 +1,32 @@
+<header class="masthead">
+  <div class="masthead-topband"></div>
+  <div class="masthead-inner">
+
+    <div class="masthead-ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-center">🪔</div>
+      <div class="ornament-line right"></div>
+    </div>
+
+    <div class="masthead-sub">தரமான பித்தளை · Since {{ .Site.Params.since }}</div>
+
+    <h1 class="masthead-title">{{ .Site.Params.titleLine1 }}<br>{{ .Site.Params.titleLine2 }}</h1>
+
+    <p class="masthead-tagline">{{ .Site.Params.tagline }}</p>
+
+    <div class="trust-row">
+      <span class="trust-pill">✦ தூய பித்தளை</span>
+      <span class="trust-pill">✦ மொத்த விலை</span>
+      <span class="trust-pill">✦ கோவில் நிபுணர்கள்</span>
+    </div>
+
+    <a href="tel:{{ .Site.Params.phone }}" class="call-strip">
+      <div class="call-strip-icon">📞</div>
+      <div>
+        <div class="call-strip-number">{{ .Site.Params.phoneDisplay }}</div>
+        <div class="call-strip-label">இப்போதே அழைக்கவும்</div>
+      </div>
+    </a>
+
+  </div>
+</header>

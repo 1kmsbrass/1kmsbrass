@@ -1,0 +1,16 @@
+<div class="footer-stamp">
+  <div class="stamp-title">விலை பட்டியல் வேண்டுமா?</div>
+  <div class="stamp-sub">உங்கள் தேவைக்கேற்ற விலையில் பொருட்கள் — இப்போதே தொடர்பு கொள்ளுங்கள்</div>
+  <div class="stamp-actions">
+    <a href="tel:{{ .Site.Params.phone }}" class="stamp-btn btn-call">
+      📞 அழைக்கவும்
+    </a>
+    <a href="https://wa.me/{{ .Site.Params.whatsapp }}?text=விலை%20பட்டியல்%20அனுப்புங்கள்" class="stamp-btn btn-wa">
+      💬 WhatsApp
+    </a>
+  </div>
+</div>
+
+<div class="footer-legal">
+  © {{ now.Format "2006" }} {{ .Site.Params.titleLine1 }} {{ .Site.Params.titleLine2 }} · தமிழ்நாடு, இந்தியா
+</div>

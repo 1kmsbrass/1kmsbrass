@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ .Site.Title }} – பித்தளை பொருட்கள்{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+{{ partial "seo.html" . }}
+{{ $css := resources.Get "css/main.css" }}
+{{ $css = $css | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+<body>
+{{ block "main" . }}{{ end }}
+</body>
+</html>
