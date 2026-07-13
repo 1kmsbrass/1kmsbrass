@@ -1,0 +1,68 @@
+backend:
+  name: github
+  repo: 1kmsbrass/1kmsbrass
+  branch: main
+  base_url: https://1kmsbrass.pages.dev
+  auth_endpoint: api/auth
+
+media_folder: "static/images/products"
+public_folder: "/images/products"
+
+collections:
+  - name: "temple-items"
+    label: "கோவில் பொருட்கள் (Temple Items)"
+    folder: "content/temple-items"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "nameEnglish"
+    fields:
+      - { label: "Title (SEO)", name: "title", widget: "string" }
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+      - { label: "Keywords", name: "keywords", widget: "list" }
+      - { label: "Tamil Name", name: "nameTamil", widget: "string" }
+      - { label: "English Name", name: "nameEnglish", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "temple-items" }
+      - { label: "Type", name: "type", widget: "hidden", default: "product" }
+      - { label: "Main Image", name: "imageURL", widget: "image", required: false }
+      - { label: "Min Bulk Qty", name: "minBulkQty", widget: "number", default: 10 }
+      - label: "Sizes & Pricing"
+        name: "sizes"
+        widget: "list"
+        fields:
+          - { label: "Size name", name: "size", widget: "string" }
+          - { label: "Litre capacity", name: "litre", widget: "number", required: false }
+          - { label: "Retail price (₹)", name: "retailPrice", widget: "number" }
+          - { label: "Wholesale price (₹)", name: "wholesalePrice", widget: "number" }
+      - { label: "Amazon URL", name: "amazonURL", widget: "string", required: false }
+      - { label: "Flipkart URL", name: "flipkartURL", widget: "string", required: false }
+      - { label: "Meesho URL", name: "meeshoURL", widget: "string", required: false }
+      - { label: "Body / extra description", name: "body", widget: "markdown", required: false }
+
+  - name: "products"
+    label: "வீட்டு பொருட்கள் (Home Products)"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "nameEnglish"
+    fields:
+      - { label: "Title (SEO)", name: "title", widget: "string" }
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+      - { label: "Keywords", name: "keywords", widget: "list" }
+      - { label: "Tamil Name", name: "nameTamil", widget: "string" }
+      - { label: "English Name", name: "nameEnglish", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "products" }
+      - { label: "Type", name: "type", widget: "hidden", default: "product" }
+      - { label: "Main Image", name: "imageURL", widget: "image", required: false }
+      - { label: "Min Bulk Qty", name: "minBulkQty", widget: "number", default: 10 }
+      - label: "Sizes & Pricing"
+        name: "sizes"
+        widget: "list"
+        fields:
+          - { label: "Size name", name: "size", widget: "string" }
+          - { label: "Litre capacity", name: "litre", widget: "number", required: false }
+          - { label: "Retail price (₹)", name: "retailPrice", widget: "number" }
+          - { label: "Wholesale price (₹)", name: "wholesalePrice", widget: "number" }
+      - { label: "Amazon URL", name: "amazonURL", widget: "string", required: false }
+      - { label: "Flipkart URL", name: "flipkartURL", widget: "string", required: false }
+      - { label: "Meesho URL", name: "meeshoURL", widget: "string", required: false }
+      - { label: "Body / extra description", name: "body", widget: "markdown", required: false }
