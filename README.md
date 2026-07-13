@@ -4,7 +4,7 @@
 1. Install Hugo (extended version): https://gohugo.io/installation/
 2. From this folder: `hugo server -D`
 3. Open http://localhost:1313
-
+ 
 ## Edit content
 - **Category cards (homepage grid)** → `data/categories.yaml`
 - **Featured product chips (scroll strip)** → `data/featured.yaml`
