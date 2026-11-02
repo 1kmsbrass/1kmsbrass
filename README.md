@@ -55,3 +55,8 @@ the `imageURL:` field for that item in `data/categories.yaml` or
   items need real photos — set those via `imageURL` once uploaded to R2.
 - `hugo.toml` centralizes your phone/WhatsApp numbers so you never have to
   hunt through templates to update them.
+
+
+## Repository documentation rule
+
+Follow the [repository documentation linking rule](.github/REPOSITORY-DOCUMENTATION-RULE.md). Substantive documentation must be compared with existing files and include direct links to meaningfully related documents.
