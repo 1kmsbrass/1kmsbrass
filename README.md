@@ -1,5 +1,9 @@
 # கும்பகோணம் மெட்டல் ஸ்டோர்ஸ் — Hugo Site
 
+## Strategy
+
+- [Durable distribution strategy](strategy/durable-distribution.md) — capital-light durability, customer and market knowledge, and the exploratory retail ritual-products opportunity.
+
 ## Run locally
 1. Install Hugo (extended version): https://gohugo.io/installation/
 2. From this folder: `hugo server -D`
@@ -55,7 +59,6 @@ the `imageURL:` field for that item in `data/categories.yaml` or
   items need real photos — set those via `imageURL` once uploaded to R2.
 - `hugo.toml` centralizes your phone/WhatsApp numbers so you never have to
   hunt through templates to update them.
-
 
 ## Repository documentation rule
 
