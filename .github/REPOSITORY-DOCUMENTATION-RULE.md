@@ -8,3 +8,9 @@ This repository follows the central standards in [1kmsbrass/rules](https://githu
 - **Specific rules:** Technical, legal, financial, safety, privacy, brand and customer-facing requirements take precedence for their subject. Identify genuine conflicts rather than guessing.
 
 This file points to the central source of truth; it does not replace repository-specific documentation or architecture.
+
+## Descriptive documentation filenames
+
+Canonical rule: [REPO-NAME-001 — Descriptive Documentation Filenames](https://github.com/1kmsbrass/rules/blob/main/rules/repository-work/descriptive-document-filenames.md).
+
+Keep the root `README.md` as the repository landing page. Give substantive documents descriptive lowercase kebab-case filenames and meaningful H1 headings. Keep nested README files only when they are genuine, concise folder indexes. When renaming, update and verify all inbound links. Preserve framework-required, generated and machine-consumed filenames.
